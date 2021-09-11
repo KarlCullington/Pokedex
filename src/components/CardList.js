@@ -1,22 +1,24 @@
 import React from 'react';
-import Card from './Card';
+import PokemonThumb from './PokemonThumb';
+import '../index.css';
 
-const CardList = ({ robots }) => {
-    return (
-        <div>
-            {robots.map((user, i) => {
-                return (
-                    <Card
-                        key={i}
-                        id={robots[i].id}
-                        name={robots[i].name}
-                        email={robots[i].email}
-                        username={robots[i].username}
-                    />
-                );
-            })}
-        </div>
-    );
-};
+class CardList extends React.Component {
+    render() {
+        const pokemonArr = this.props.pokemonList.map((onePokemon) => {
+            return (
+                <PokemonThumb
+                    key={onePokemon.id}
+                    image={onePokemon.sprites.other.dream_world.front_default}
+                    name={onePokemon.name}
+                    id={onePokemon.id}
+                    height={onePokemon.height}
+                    weight={onePokemon.weight}
+                    type={onePokemon.types[0].type.name}
+                />
+            );
+        });
+        return <div>{pokemonArr}</div>;
+    }
+}
 
 export default CardList;

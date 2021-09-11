@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 
-class ErrorBoundry extends Component {
+class ErrorBoundry extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +14,7 @@ class ErrorBoundry extends Component {
 
     render() {
         if (this.state.hasError) {
-            return <h1>Ooooops, That is not good!</h1>;
+            return <h1>OOOOPS, Something went wrong</h1>;
         }
         return this.props.children;
     }
