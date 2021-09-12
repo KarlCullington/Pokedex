@@ -1,6 +1,6 @@
 {
     "homepage": "https://KarlCullington.github.io/Pokedex",
-    "name": "robofriends",
+    "name": "pokedex",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
