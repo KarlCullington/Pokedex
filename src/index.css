@@ -120,7 +120,6 @@ code {
 .pokemon-title {
     width: 500px;
     height: 200px;
-    z-index: 999;
 }
 
 .search-box {
